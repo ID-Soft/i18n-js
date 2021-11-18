@@ -1086,11 +1086,17 @@
     return merge(obj1, obj2);
   };
 
-  setTimeout(function() {
+  if (window.isWkhtmltopdf) {
+    setTimeout(function() {
+      I18n.t = I18n.translate.bind(I18n);
+      I18n.l = I18n.localize.bind(I18n);
+      I18n.p = I18n.pluralize.bind(I18n);
+    } , 0);
+  } else {
     I18n.t = I18n.translate.bind(I18n);
     I18n.l = I18n.localize.bind(I18n);
     I18n.p = I18n.pluralize.bind(I18n);
-  } , 0);
+  }
 
   return I18n;
 }));
