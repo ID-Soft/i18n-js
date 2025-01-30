@@ -4,11 +4,13 @@ on:
   pull_request:
     branches:
       - main
+      - v3
     paths-ignore:
       - 'README.md'
   push:
     branches:
       - main
+      - v3
     paths-ignore:
       - 'README.md'
 
@@ -26,6 +28,8 @@ jobs:
           - 2.5
           - 2.6
           - 2.7
+          - '3.0'
+          - 3.1
         gemfile:
           - gemfiles/i18n_0_6.gemfile
           - gemfiles/i18n_0_7.gemfile
@@ -40,6 +44,8 @@ jobs:
           - gemfiles/i18n_1_6.gemfile
           - gemfiles/i18n_1_7.gemfile
           - gemfiles/i18n_1_8.gemfile
+          - gemfiles/i18n_1_9.gemfile
+          - gemfiles/i18n_1_10.gemfile
         allow_failures:
           - false
         include:

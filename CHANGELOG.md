@@ -1,6 +1,6 @@
 # Change Log
 All notable changes to this project will be documented in this file.
-This project adheres to [Semantic Versioning](http://semver.org/).
+This project adheres to [Semantic Versioning](https://semver.org/).
 
 
 ## [Unreleased]
@@ -18,7 +18,23 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Nothing
 
 
-## [3.9.0]
+## [3.9.2] - 2022-03-31
+
+### Fixed
+
+- [JS] Fix pluralization fallback in i18n.js  
+  (PR: https://github.com/fnando/i18n-js/pull/645)
+
+
+## [3.9.1] - 2022-02-08
+
+### Changed
+
+- [Ruby] Allow rails 7
+  (PR: https://github.com/fnando/i18n-js/pull/638)
+
+
+## [3.9.0] - 2021-07-30
 
 ### Added
 
@@ -26,7 +42,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   (PR: https://github.com/fnando/i18n-js/pull/617)
 
 
-## [3.8.4]
+## [3.8.4] - 2021-07-27
 
 ### Fixed
 
@@ -34,7 +50,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   (PR: https://github.com/fnando/i18n-js/pull/591)
 
 
-## [3.8.3]
+## [3.8.3] - 2021-05-21
 
 ### Changed
 
@@ -517,7 +533,9 @@ And today is not April Fools' Day
 
 
 
-[Unreleased]: https://github.com/fnando/i18n-js/compare/v3.9.0...HEAD
+[Unreleased]: https://github.com/fnando/i18n-js/compare/v3.9.2...HEAD
+[3.9.2]:      https://github.com/fnando/i18n-js/compare/v3.9.1...v3.9.2
+[3.9.1]:      https://github.com/fnando/i18n-js/compare/v3.9.0...v3.9.1
 [3.9.0]:      https://github.com/fnando/i18n-js/compare/v3.8.4...v3.9.0
 [3.8.4]:      https://github.com/fnando/i18n-js/compare/v3.8.3...v3.8.4
 [3.8.3]:      https://github.com/fnando/i18n-js/compare/v3.8.2...v3.8.3

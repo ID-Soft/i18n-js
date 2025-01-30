@@ -8,11 +8,10 @@
 
 <p align="center">
   <a href="https://github.com/fnando/i18n-js/actions?query=workflow%3ATests"><img src="https://github.com/fnando/i18n-js/workflows/Tests/badge.svg" alt="Tests"></a>
-  <a href="http://badge.fury.io/rb/i18n-js"><img src="http://img.shields.io/gem/v/i18n-js.svg" alt="Gem Version"></a>
+  <a href="https://badge.fury.io/rb/i18n-js"><img src="https://img.shields.io/gem/v/i18n-js.svg" alt="Gem Version"></a>
   <a href="https://www.npmjs.com/package/i18n-js"><img src="https://img.shields.io/npm/v/i18n-js.svg" alt="npm"></a>
   <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a>
-  <a href="https://travis-ci.org/fnando/i18n-js"><img src="http://img.shields.io/travis/fnando/i18n-js.svg" alt="Build Status"></a>
-  <a href="https://coveralls.io/r/fnando/i18n-js"><img src="http://img.shields.io/coveralls/fnando/i18n-js.svg" alt="Coverage Status"></a>
+  <a href="https://coveralls.io/r/fnando/i18n-js"><img src="https://img.shields.io/coveralls/fnando/i18n-js.svg" alt="Coverage Status"></a>
   <a href="https://gitter.im/fnando/i18n-js"><img src="https://img.shields.io/badge/gitter-join%20chat-1dce73.svg" alt="Gitter"></a>
 </p>
 
@@ -59,10 +58,10 @@ For more details, see:
 - [this gist](https://gist.github.com/bazzel/ecdff4718962e57c2d5569cf01d332fe)
 - https://github.com/fnando/i18n-js/issues/597
 
-#### Rails app with [Asset Pipeline](http://guides.rubyonrails.org/asset_pipeline.html)
+#### Rails app with [Asset Pipeline](https://guides.rubyonrails.org/asset_pipeline.html)
 
 If you're using the
-[asset pipeline](http://guides.rubyonrails.org/asset_pipeline.html), then you
+[asset pipeline](https://guides.rubyonrails.org/asset_pipeline.html), then you
 must add the following line to your `app/assets/javascripts/application.js`.
 
 ```javascript
@@ -77,7 +76,7 @@ must add the following line to your `app/assets/javascripts/application.js`.
 //= require i18n/translations
 ```
 
-#### Rails app without [Asset Pipeline](http://guides.rubyonrails.org/asset_pipeline.html)
+#### Rails app without [Asset Pipeline](https://guides.rubyonrails.org/asset_pipeline.html)
 
 First, put this in your `application.html` (layout file). Then get the JS files
 following the instructions below.
@@ -987,23 +986,26 @@ more details and discussion of this issue.
 ### JS `I18n.toCurrency` & `I18n.toNumber` cannot handle large integers
 
 The above methods use `toFixed` and it only supports 53 bit integers. Ref:
-http://2ality.com/2012/07/large-integers.html
+https://2ality.com/2012/07/large-integers.html
 
 Feel free to find & discuss possible solution(s) at issue
 [#511](https://github.com/fnando/i18n-js/issues/511)
 
-### Only works with `Simple` backend
+### May not work with all backend implementations
 
-If you set `I18n.backend` to something other than the default `Simple` backend,
-you will likely get an exception like this:
+I18n backend implementations have to conform to a specific interface to work
+with i18n-js. For backends that do not conform to the interface, you will likely
+get an exception like this:
 
 ```
 Undefined method 'initialized?' for <your backend class>
 ```
 
-For now, i18n-js is only compatible with the `Simple` backend. If you need a
-more sophisticated backend for your rails application, like
-`I18n::Backend::ActiveRecord`, you can setup i18n-js to get translations from a
+For now, i18n-js is compatible with the `Simple` backend and with
+`I18n::Backend::ActiveRecord` (>= 0.4.0).
+
+If you need a more sophisticated backend for your rails application that doesn't
+implement the required methods, you can setup i18n-js to get translations from a
 separate `Simple` backend, by adding the following in an initializer:
 
 ```ruby
@@ -1042,18 +1044,18 @@ and discussion of this issue.
 
 ## Maintainer
 
-- Nando Vieira - <http://nandovieira.com>
+- Nando Vieira - <https://nandovieira.com>
 
 ## Contributing
 
 Once you've made your great commits:
 
-1. [Fork](http://help.github.com/forking/) I18n.js
+1. [Fork](https://help.github.com/forking/) I18n.js
 2. Create a branch with a clear name
 3. Make your changes (Please also add/change spec, README and CHANGELOG if
    applicable)
 4. Push changes to the created branch
-5. [Create an Pull Request](http://github.com/fnando/i18n-js/pulls)
+5. [Create an Pull Request](https://github.com/fnando/i18n-js/pulls)
 6. That's it!
 
 Please respect the indentation rules and code style. And use 2 spaces, not tabs.
